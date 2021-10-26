@@ -71,3 +71,8 @@ test = np.hstack((test_data, test_target))
 #print(test)
 test_dataFrame = pd.DataFrame(test, columns=["test_length","test_weight","test_target"])
 #print(test_dataFrame)
+
+#9. 데이터 DB insert
+engine = db.create_engine("mariadb+mariadbconnector://python:python1234@127.0.0.1:3306/pythondb")
+train_dataFrame.to_sql("train",engine, index=False,if_exists="replace")
+test_dataFrame.to_sql("test",engine, index=False,if_exists="replace")
