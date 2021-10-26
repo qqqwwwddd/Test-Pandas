@@ -11,3 +11,7 @@ smelt_length = pd.read_csv("smelt_length.csv").to_numpy().flatten()
 #print(smelt_length)
 smelt_weight = pd.read_csv("smelt_weight.csv").to_numpy().flatten()
 #print(smelt_weight)
+
+plt.scatter(bream_length,bream_weight)
+plt.scatter(smelt_length,smelt_weight)
+plt.show()
