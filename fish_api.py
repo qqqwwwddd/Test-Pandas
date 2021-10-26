@@ -51,4 +51,23 @@ test_target = fish_target[39:]
 #7. 훈련,검증 데이터 시각화
 plt.scatter(train_data[:,0], train_data[:,1]) #훈련데이터 시각화
 plt.scatter(test_data[:,0], test_data[:,1]) #검증데이터 시각화
-plt.show()
+#plt.show()
+
+#8. 판다스로 변환
+
+## train
+train_target = train_target.reshape(39,1)
+# print(train_target.shape)
+# print(train_data.shape)
+train = np.hstack((train_data, train_target))
+# print(train)
+train_dataFrame = pd.DataFrame(train, columns=["train_length","train_weight","train_target"])
+# print(train_dataFrame)
+
+## test
+test_target = test_target.reshape(10,1)
+#print(test_target.shape)
+test = np.hstack((test_data, test_target))
+#print(test)
+test_dataFrame = pd.DataFrame(test, columns=["test_length","test_weight","test_target"])
+#print(test_dataFrame)
