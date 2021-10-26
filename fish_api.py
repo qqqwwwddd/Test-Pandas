@@ -43,9 +43,12 @@ train_target = fish_target[:39]
 test_data = fish_data[39:]
 test_target = fish_target[39:]
 
-print(train_data)
-print(train_target)
-print(test_data)
-print(test_target)
+# print(train_data)
+# print(train_target)
+# print(test_data)
+# print(test_target)
 
-
+#7. 훈련,검증 데이터 시각화
+plt.scatter(train_data[:,0], train_data[:,1]) #훈련데이터 시각화
+plt.scatter(test_data[:,0], test_data[:,1]) #검증데이터 시각화
+plt.show()
