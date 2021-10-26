@@ -33,5 +33,7 @@ fish_target = np.concatenate((np.ones(35), np.zeros(14)))
 #5. 데이터 셔플하기
 indexes = np.arange(49)
 np.random.shuffle(indexes)
-print(indexes)
+#print(indexes)
+fish_data = fish_data[indexes]
+fish_target = fish_target[indexes]
 
