@@ -37,3 +37,15 @@ np.random.shuffle(indexes)
 fish_data = fish_data[indexes]
 fish_target = fish_target[indexes]
 
+#6. 훈련데이터, 검증데이터 나누기 
+train_data = fish_data[:39]
+train_target = fish_target[:39]
+test_data = fish_data[39:]
+test_target = fish_target[39:]
+
+print(train_data)
+print(train_target)
+print(test_data)
+print(test_target)
+
+
